@@ -19,37 +19,37 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
     <div class="row">
         <!-- desktop menu start -->
-        <div class="col-lg-2 p-5 sticky-top" id="box">
-            <div class="affix">
+        <div class="col-lg-2 pt-5 sticky-top" id="box">
+            <div>
                 <div class="float-right">
                 </div>
-                <p class="smtxt">Hello</p>
-                <p id="name">Zeeshan</p><br>
-                <p class="smtxt">Card no</p>
-                <p id="cd_num">CC10000010N</p><br><br>
-                <div class="form-inline p-2">
+                <p class="smtxt pl-5">Hello</p>
+                <p id="name" class="pl-5">Zeeshan</p><br>
+                <p class="smtxt pl-5">Card no</p>
+                <p id="cd_num" class="pl-5">CC10000010N</p><br><br>
+                <div class="form-inline pt-2 pb-2 pl-2 act" id="av_bal" onclick="av()">
                     <img src="images/wallet.png" alt="">
                     <p class="menu_item m-2">Available Balance</p>
                     <div id="bal" class="p-1">
                         <p id="bal_available"><span class="align-middle">$ 106</span></p>
                     </div>
                 </div>
-                <div class="form-inline p-2">
+                <div class="form-inline p-2" id="card_sav" onclick="card()">
                     <img src="images/card.png" alt="">
                     <p class="menu_item m-2">Card Savings</p>
                 </div>
-                <div class="form-inline p-2">
+                <div class="form-inline p-2" id="promotion" onclick="promotion()">
                     <img src="images/promotion.png" alt="">
                     <p class="menu_item m-2">Promotions</p>
                 </div>
-                <div class="form-inline p-2">
+                <div class="form-inline p-2" id="profile" onclick="profile()">
                     <img src="images/profile.png" alt="">
                     <p class="menu_item m-2">My Profile</p>
                 </div>
@@ -66,35 +66,35 @@
         <!-- mobile menu start -->
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="p-5">
+            <div class="mt-5">
                 <div class="float-right">
                 </div>
-                <p class="smtxt">Hello</p>
-                <p id="name">Zeeshan</p><br>
-                <p class="smtxt">Card no</p>
-                <p id="cd_num">CC10000010N</p><br><br>
-                <div class="form-inline p-2">
+                <p class="smtxt ml-5">Hello</p>
+                <p id="name" class="ml-5">Zeeshan</p><br>
+                <p class="smtxt pl-5">Card no</p>
+                <p id="cd_num" class="ml-5">CC10000010N</p><br><br>
+                <div class="form-inline p-2 ml-5 act" id="av_bal_m" onclick="av()">
                     <img src="images/wallet.png" alt="">
                     <p class="menu_item m-2">Available Balance</p>
                     <div id="bal" class="p-1">
                         <p id="bal_available"><span class="align-middle">$ 106</span></p>
                     </div>
                 </div>
-                <div class="form-inline p-2">
+                <div class="form-inline p-2 ml-5" id="card_sav_m" onclick="card()">
                     <img src="images/card.png" alt="">
                     <p class="menu_item m-2">Card Savings</p>
                 </div>
-                <div class="form-inline p-2">
+                <div class="form-inline p-2 ml-5" id="promotion_m" onclick="promotion()">
                     <img src="images/promotion.png" alt="">
                     <p class="menu_item m-2">Promotions</p>
                 </div>
-                <div class="form-inline p-2">
+                <div class="form-inline p-2 ml-5" id="profile_m" onclick="profile()">
                     <img src="images/profile.png" alt="">
                     <p class="menu_item m-2">My Profile</p>
                 </div>
-                <div class="footer-images">
+                <div class="footer-images ml-4">
                     <img src="images/image.png" alt=""><br>
-                    <div class="form-inline text-center mb-2">
+                    <div class="form-inline text-center ml- mb-2">
                         <p id="pow" class="m-2 center">Powered by</p>
                         <img src="images/fairloy.png" alt="">
                     </div>
@@ -181,6 +181,68 @@
 
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <!-- desktop menu active script -->
+    <script>
+        var av_bal = document.getElementById("av_bal");
+        var card_sav = document.getElementById("card_sav");
+        var prom = document.getElementById("promotion");
+        var pro = document.getElementById("profile");
+        function av() {
+            av_bal.classList.add("act");
+            card_sav.classList.remove("act");
+            prom.classList.remove("act");
+            pro.classList.remove("act");
+        }
+        function card() {
+            av_bal.classList.remove("act");
+            card_sav.classList.add("act");
+            prom.classList.remove("act");
+            pro.classList.remove("act");
+        }
+        function promotion() {
+            av_bal.classList.remove("act");
+            card_sav.classList.remove("act");
+            prom.classList.add("act");
+            pro.classList.remove("act");
+        }
+        function profile() {
+            av_bal.classList.remove("act");
+            card_sav.classList.remove("act");
+            prom.classList.remove("act");
+            pro.classList.add("act");
+        }
+    </script>
+    <!-- desktop menu active script-->
+    <script>
+        var av_bal = document.getElementById("av_bal_m");
+        var card_sav = document.getElementById("card_sav_m");
+        var prom = document.getElementById("promotion_m");
+        var pro = document.getElementById("profile_m");
+        function av() {
+            av_bal.classList.add("act");
+            card_sav.classList.remove("act");
+            prom.classList.remove("act");
+            pro.classList.remove("act");
+        }
+        function card() {
+            av_bal.classList.remove("act");
+            card_sav.classList.add("act");
+            prom.classList.remove("act");
+            pro.classList.remove("act");
+        }
+        function promotion() {
+            av_bal.classList.remove("act");
+            card_sav.classList.remove("act");
+            prom.classList.add("act");
+            pro.classList.remove("act");
+        }
+        function profile() {
+            av_bal.classList.remove("act");
+            card_sav.classList.remove("act");
+            prom.classList.remove("act");
+            pro.classList.add("act");
         }
     </script>
 </body>
