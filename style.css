@@ -1,5 +1,10 @@
     @import url('https://fonts.googleapis.com/css?family=Karla|Montserrat&display=swap');
 
+    body{
+        background: #F2F2F2;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
     .smtxt {
         font-size: 12px;
         font-family: 'Karla', sans-serif;
@@ -21,6 +26,8 @@
         font-style: normal;
         font-weight: bold;
         font-size: 24px;
+        margin-top: -1rem;
+        margin-bottom: 1rem;
     }
 
     #cd_num {
@@ -31,6 +38,8 @@
         line-height: 20px;
         letter-spacing: 2px;
         color: #313233;
+        margin-top: -1rem;
+        margin-bottom: 2rem;
     }
 
     .menu_item {
@@ -114,6 +123,7 @@
         background: #87C56D;
         box-shadow: 0px 0px 14px #E1E1E9;
         border-radius: 8px;
+        color: #FFFFFF;
     }
 
     .tb {
@@ -193,6 +203,12 @@
     #hamburger{
         display: none;
     }
+
+    .menu_bd{
+        border-left: 5px solid #ffffff;
+    }
+
+
 
     @media screen and (max-height: 450px) {
         .sidenav {

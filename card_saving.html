@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fairloy</title>
+    <!-- bootstrap style cdn link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- bootstrap javascript cdn links -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .id {
+        font-family: 'Karla', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 16px;
+        color: #313233;
+    }
+
+    .card_div {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 14px #E1E1E9;
+    }
+</style>
+
+<body>
+    <div class="row">
+        <!-- desktop menu start -->
+        <div class="col-lg-2 pt-5 sticky-top" id="box">
+            <div>
+                <div class="float-right">
+                </div>
+                <p class="smtxt pl-5">Hello</p>
+                <p id="name" class="pl-5">Zeeshan</p><br>
+                <p class="smtxt pl-5">Card no</p>
+                <p id="cd_num" class="pl-5">CC10000010N</p><br><br>
+                <div class="form-inline pt-2 pb-2 pl-2" id="av_bal_d" onclick="av()">
+                    <img src="images/wallet.png" alt="">
+                    <p class="menu_item m-2">Available Balance</p>
+                    <div id="bal" class="p-1">
+                        <p id="bal_available"><span class="align-middle">$ 106</span></p>
+                    </div>
+                </div>
+                <div class="form-inline p-2 act" id="card_sav_d" onclick="card()">
+                    <img src="images/card.png" alt="">
+                    <p class="menu_item m-2">Card Savings</p>
+                </div>
+                <div class="form-inline p-2" id="promotion_d" onclick="promotion()">
+                    <img src="images/promotion.png" alt="">
+                    <p class="menu_item m-2">Promotions</p>
+                </div>
+                <div class="form-inline p-2" id="profile_d" onclick="profile()">
+                    <img src="images/profile.png" alt="">
+                    <p class="menu_item m-2">My Profile</p>
+                </div>
+                <div class="footer-images">
+                    <img src="images/image.png" alt=""><br>
+                    <div class="form-inline text-center mb-2">
+                        <p id="pow" class="m-2 center">Powered by</p>
+                        <img src="images/fairloy.png" alt="">
+                    </div>
+                </div><br>
+            </div>
+        </div>
+        <!-- desktop menu end -->
+        <!-- mobile menu start -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="mt-3">
+                <div class="float-right">
+                </div>
+                <p class="smtxt ml-5">Hello</p>
+                <p id="name" class="ml-5">Zeeshan</p><br>
+                <p class="smtxt pl-5">Card no</p>
+                <p id="cd_num" class="ml-5">CC10000010N</p><br><br>
+                <div class="form-inline p-2 ml-5" id="av_bal_m" onclick="av()">
+                    <img src="images/wallet.png" alt="">
+                    <p class="menu_item m-2">Available Balance</p>
+                    <div id="bal" class="p-1">
+                        <p id="bal_available"><span class="align-middle">$ 106</span></p>
+                    </div>
+                </div>
+                <div class="form-inline p-2 ml-5 act" id="card_sav_m" onclick="card()">
+                    <img src="images/card.png" alt="">
+                    <p class="menu_item m-2">Card Savings</p>
+                </div>
+                <div class="form-inline p-2 ml-5" id="promotion_m" onclick="promotion()">
+                    <img src="images/promotion.png" alt="">
+                    <p class="menu_item m-2">Promotions</p>
+                </div>
+                <div class="form-inline p-2 ml-5" id="profile_m" onclick="profile()">
+                    <img src="images/profile.png" alt="">
+                    <p class="menu_item m-2">My Profile</p>
+                </div>
+                <div class="footer-images ml-4">
+                    <img src="images/image.png" alt=""><br>
+                    <div class="form-inline text-center ml- mb-2">
+                        <p id="pow" class="m-2 center">Powered by</p>
+                        <img src="images/fairloy.png" alt="">
+                    </div>
+                </div><br>
+            </div>
+        </div>
+
+        <!-- mobile menu end -->
+
+        <div class="col-lg-8 ml-3">
+            <div class="mt-lg-5 form-inline">
+                <span style="font-size:30px;cursor:pointer" id="hamburger" onclick="openNav()">&#9776;</span>
+                <p id="dash" class="mt-3 ml-2">Card saving</p>
+            </div>
+            <div>
+                <table class="table table-striped tb table-borderless d-none">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="tb_heading">S.no</th>
+                            <th scope="col" class="tb_heading">ID</th>
+                            <th scope="col" class="tb_heading">Date</th>
+                            <th scope="col" class="tb_heading">Amount spent</th>
+                            <th scope="col" class="tb_heading">Amount Earned</th>
+                            <th scope="col" class="tb_heading">Details</th>
+                            <th scope="col" class="tb_heading">Feedback</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tb_items">1</td>
+                            <td class="tb_items">U883939</td>
+                            <td class="tb_items">12-04-2019</td>
+                            <td class="tb_items">$8990</td>
+                            <td class="tb_items">$239</td>
+                            <td class="tb_items">loreum ipsum</td>
+                            <td class="tb_items"><img src="images/stars.png" alt=""></td>
+
+                        </tr>
+                        <tr>
+                            <td class="tb_items">1</td>
+                            <td class="tb_items">U883939</td>
+                            <td class="tb_items">12-04-2019</td>
+                            <td class="tb_items">$8990</td>
+                            <td class="tb_items">$239</td>
+                            <td class="tb_items">loreum ipsum</td>
+                            <td class="tb_items"><img src="images/stars.png" alt=""></td>
+
+                        </tr>
+                        <var>
+                            <tr>
+                                <td class="tb_items">1</td>
+                                <td class="tb_items">U883939</td>
+                                <td class="tb_items">12-04-2019</td>
+                                <td class="tb_items">$8990</td>
+                                <td class="tb_items">$239</td>
+                                <td class="tb_items">loreum ipsum</td>
+                                <td class="tb_items"><img src="images/stars.png" alt=""></td>
+
+                            </tr>
+                            <var>
+                                <tr>
+                                    <td class="tb_items">1</td>
+                                    <td class="tb_items">U883939</td>
+                                    <td class="tb_items">12-04-2019</td>
+                                    <td class="tb_items">$8990</td>
+                                    <td class="tb_items">$239</td>
+                                    <td class="tb_items">loreum ipsum</td>
+                                    <td class="tb_items"><img src="images/stars.png" alt=""></td>
+
+                                </tr>
+                                <tr>
+                                    <td class="tb_items">1</td>
+                                    <td class="tb_items">U883939</td>
+                                    <td class="tb_items">12-04-2019</td>
+                                    <td class="tb_items">$8990</td>
+                                    <td class="tb_items">$239</td>
+                                    <td class="tb_items">loreum ipsum</td>
+                                    <td class="tb_items"><img src="images/stars.png" alt=""></td>
+
+                                </tr>
+                            </var>
+                        </var>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-md-6 p-5 card_div">
+                    <div>
+                        <p class="id">U883939</p>
+                        <p>12-04-2019</p>
+                        <div class="float-right" style="margin-top: -3.5rem;">
+                            <img src="images/stars.png" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <p>Amount Spent</p>
+                        <p class="text-right" style="margin-top: -2.5rem">$8990</p>
+                    </div>
+                    <div>
+                        <p>Amount Earned</p>
+                        <p class="text-right" style="margin-top: -2.5rem">$8990</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <!-- desktop menu active script -->
+    <script>
+        var av_bal = document.getElementById("av_bal_d");
+        var card_sav = document.getElementById("card_sav_d");
+        var prom = document.getElementById("promotion_d");
+        var pro = document.getElementById("profile_d");
+        function av() {
+            av_bal.classList.add("act");
+            card_sav.classList.remove("act");
+            prom.classList.remove("act");
+            pro.classList.remove("act");
+        }
+        function card() {
+            av_bal.classList.remove("act");
+            card_sav.classList.add("act");
+            prom.classList.remove("act");
+            pro.classList.remove("act");
+        }
+        function promotion() {
+            av_bal.classList.remove("act");
+            card_sav.classList.remove("act");
+            prom.classList.add("act");
+            pro.classList.remove("act");
+        }
+        function profile() {
+            av_bal.classList.remove("act");
+            card_sav.classList.remove("act");
+            prom.classList.remove("act");
+            pro.classList.add("act");
+        }
+    </script>
+</body>
+
+</html>
