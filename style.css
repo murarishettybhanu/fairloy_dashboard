@@ -1,0 +1,210 @@
+    @import url('https://fonts.googleapis.com/css?family=Karla|Montserrat&display=swap');
+
+    .smtxt {
+        font-size: 12px;
+        font-family: 'Karla', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        color: #918F90;
+    }
+
+    #box {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+        height: 950px;
+        display: block;
+    }
+
+    #name {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    #cd_num {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        color: #313233;
+    }
+
+    .menu_item {
+        font-family: 'Karla', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #313233;
+    }
+
+    #bal {
+        background: #87C56D;
+        border-radius: 3px;
+        height: 1.5rem;
+    }
+
+    #bal_available {
+
+        font-family: 'Karla', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+
+    .footer-images {
+        margin: auto;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        margin-left: -1.7rem;
+    }
+
+    #pow {
+        font-family: 'Karla', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+    }
+
+    #dash {
+        font-family: 'Karla', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 33px;
+        color: #313233;
+    }
+
+    #promo {
+        font-family: 'Karla', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        color: #313233;
+    }
+
+    #promo_inp {
+        background: #FFFFFF;
+        border: 1px solid #E0E3E5;
+        box-sizing: border-box;
+        border-radius: 3px;
+        width: 147px;
+        height: 40px;
+    }
+
+    #promo_btn {
+        background: #87C56D;
+        box-shadow: 0px 0px 14px #E1E1E9;
+        border-radius: 8px;
+    }
+
+    .tb {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px #E1E1E9;
+        border-radius: 10px;
+    }
+
+    .tb_heading {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #313233;
+        opacity: 0.5;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .tb_items {
+
+        font-family: 'Karla', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: #313233;
+        text-align: center;
+    }
+
+    .table-borderless td,
+    .table-borderless th {
+        border: 0;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    #hamburger{
+        display: none;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+    
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+    #box{
+        display: none;
+    }
+    #hamburger{
+        display: block;
+    }
+}
